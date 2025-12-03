@@ -1,5 +1,5 @@
-import Gallery from "../components/Gallery";
 import Achievements from "../components/Achievements";
+import Gallery from "../components/Gallery";
 
 export default function Home() {
   return (

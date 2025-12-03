@@ -1,11 +1,11 @@
 
 import { Routes, Route } from 'react-router-dom';
 
-import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Team from './pages/Team';
+import Home from './pages/Home';
 import Publications from './pages/Publications';
+import Team from './pages/Team';
 
 export default function Router() {
   return (
