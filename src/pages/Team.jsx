@@ -1,31 +1,14 @@
-function TeamCard({ name, designation, logo_path }) {
-    return (<div
-        className="card"
-        style={{
-            width: "260px",
-            padding: "30px",
-            borderRadius: "20px",
-            textAlign: "center",
-        }}
-    >
-        <img
-            src={logo_path}
-            alt={designation}
-            style={{
-                height: "120px",
-                width: "120px",
-                objectFit: "cover",
-                borderRadius: "50%",
-                marginBottom: "18px",
-                border: "3px solid rgba(255,255,255,0.25)",
-            }}
-        />
-        <h3 style={{ marginBottom: "6px" }}>{name}</h3>
-        <p style={{ opacity: 0.7 }}>{designation}</p>
-    </div>);
-}
+import TeamCard from "../components/TeamCard";
 
 export default function Team() {
+    const members = [
+        {
+            designation: "President",
+            name: "Name Here",
+            logo_path: "/src/test",
+        },
+    ];
+
     return (
         <section style={{ textAlign: "center" }}>
             <h1>Team Introduction</h1>
@@ -50,9 +33,10 @@ export default function Team() {
                     flexWrap: "wrap",
                 }}
             >
-                <TeamCard name="Team Member 1" designation="Designation" logo_path="logo_path.png" />
-                <TeamCard name="Team Member 2" designation="Designation" logo_path="logo_path.png" />
-                <TeamCard name="Team Member 3" designation="Designation" logo_path="logo_path.png" />
+                {members.map((member, idx) =>
+                (<TeamCard
+                    key={idx} name={member.name} designation={member.designation} logo_path={member.logo_path} />))
+                }
             </div>
         </section>
     );
