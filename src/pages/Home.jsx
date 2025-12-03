@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import Achievements from "../components/Achievements"
 import Gallery from "../components/Gallery"
 
 export default function Home() {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* HERO SECTION */}
@@ -68,11 +70,9 @@ export default function Home() {
             Creating impact through service, leadership, teamwork and innovation.
           </p>
 
-          <Link to="/team">
-            <button className="btn" style={{ padding: "14px 32px" }}>
-              Our Team
-            </button>
-          </Link>
+          <button onClick={() => setTimeout(() => navigate("/team"), 3 * 1000)} className="btn" style={{ padding: "14px 32px" }}>
+            Our Team
+          </button>
         </div>
       </section>
 
