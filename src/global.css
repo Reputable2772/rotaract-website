@@ -1,0 +1,76 @@
+html,
+body {
+  height: 100%;
+  background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom)) fixed;
+  background-attachment: fixed;
+  overscroll-behavior: none;
+  margin: 0;
+}
+
+@keyframes pulseGlow {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+:root {
+  --bg-top: #050B26;
+  --bg-bottom: #0A0F2E;
+  --accent-pink: #E01966;
+  --accent-left: #EE2E84;
+  --accent-right: #1EB8A6;
+  --text-primary: #FFFFFF;
+  --text-secondary: #C9CEDA;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom, var(--bg-top), var(--bg-bottom));
+  color: var(--text-primary);
+}
+
+section {
+  padding: 60px 10vw;
+}
+
+h1,
+h2,
+h3 {
+  margin-bottom: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 25px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.45);
+}
+
+.btn {
+  padding: 14px 26px;
+  font-weight: 600;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(to right, var(--accent-left), var(--accent-right));
+  border: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
